@@ -44,7 +44,7 @@ def get_sorted_dicom_files(dicom_dir):
 # -----------------------------
 # Load the whole volume (stack into 3D)
 # -----------------------------
-@st.cache_resource
+@st.cache
 def load_dicom_volume(dicom_dir: str):
     files = get_sorted_dicom_files(dicom_dir)
     if len(files) == 0:
