@@ -1,4 +1,5 @@
 streamlit==1.12.0
-pydicom
+altair==4.2.2
+pydicom==3.0.1
 numpy
 matplotlib
