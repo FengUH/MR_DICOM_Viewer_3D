@@ -8,7 +8,7 @@ voxel time series.
 ---
 
 ## 🚀 Live Demo
-`https://fenguh-mr-dicom-viewer-3d-dicom-viewer-p49tae.streamlit.app`
+https://fenguh-mr-dicom-viewer-3d-dicom-viewer-p49tae.streamlit.app
 
 ---
 
