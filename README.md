@@ -15,7 +15,7 @@ https://fenguh-mr-dicom-viewer-3d-dicom-viewer-p49tae.streamlit.app
 ## ✨ Key Features
 
 - **Multi-plane slice viewer**  
-  Navigate MRI data in Axial, Coronal, and Sagittal views with simple Previous/Next buttons.
+  Navigate MRI data in Axial, Coronal, and Sagittal views.
 
 - **Contrast adjustments**  
   Percentile-based intensity windowing for quick tuning and enhanced visibility.
@@ -31,8 +31,5 @@ https://fenguh-mr-dicom-viewer-3d-dicom-viewer-p49tae.streamlit.app
 
 - **Simulated fMRI time series**  
   Includes drift, block activation, and noise for teaching demonstrations.
-
-- **Streamlit-version-compatible caching**  
-  Automatically switches between `st.cache_data` (new) and `st.cache` (older Streamlit Cloud), ensuring full compatibility.
-
+  
 ---
