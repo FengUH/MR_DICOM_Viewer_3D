@@ -1,11 +1,13 @@
 """
-Minimal imghdr stub for Python 3.13+ so that older Streamlit versions
-that still `import imghdr` won't crash.
+Minimal imghdr stub for Python 3.13+ to prevent older Streamlit versions
+that still `import imghdr` from crashing.
 
-We don't actually rely on imghdr anywhere in this app, so it's safe
-to always return None and let Pillow / other libs handle image types.
+This app does not rely on imghdr for any functionality, so it's safe
+to always return None and allow Pillow or other imaging libraries
+to handle image type detection.
 """
 
 def what(file, h=None):
-    # 按标准库签名留一个占位实现，返回 None 即可
+    # Placeholder implementation matching the standard library signature.
+    # Always return None.
     return None
