@@ -67,13 +67,26 @@ def get_sorted_dicom_files(dicom_dir: str):
 # ============================================================
 # 📚 Load the full 3D volume and cache the result
 # ============================================================
-@st.cache_data(show_spinner=True)
+def _cache_func():
+    """
+    Return the appropriate cache decorator depending on the
+    Streamlit version. Newer versions expose `st.cache_data`,
+    older ones only have `st.cache`.
+    """
+    if hasattr(st, "cache_data"):
+        # Modern API (no deprecation warning on new versions)
+        return st.cache_data(show_spinner=True)
+    else:
+        # Fallback for older Streamlit releases on Streamlit Cloud
+        return st.cache(show_spinner=True)
+
+@_cache_func()
 def load_dicom_volume(dicom_dir: str):
     """
     Read all DICOM slices in the given folder, stack them into
     a 3D numpy array, and return both the volume and list of files.
 
-    Returned volume shape: (Z, Y, X)
+    Returned volume shape: (Z, Y, X).
     """
     files = get_sorted_dicom_files(dicom_dir)
     if len(files) == 0:
